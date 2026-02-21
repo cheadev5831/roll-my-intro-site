@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(cd /c/Users/우리/workspace/roll-my-intro-site && npm install 2>&1)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(cd /c/Users/우리/workspace/roll-my-intro-site && ./node_modules/.bin/quasar build 2>&1)",
+      "Bash(cd:*)",
+      "Bash(cd /c/Users/우리/workspace/roll-my-intro-site && git push origin feature/dev 2>&1)",
+      "Bash(cd /c/Users/우리/workspace/roll-my-intro-site && npm run dev 2>&1)"
+    ]
+  }
+}

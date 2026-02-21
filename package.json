@@ -1,0 +1,39 @@
+{
+  "name": "roll-my-intro-site",
+  "version": "0.1.0",
+  "description": "개발자 포트폴리오 자기소개 웹사이트",
+  "productName": "Roll My Intro Site",
+  "author": "cheadev5831",
+  "private": true,
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "deploy": "npm run build && gh-pages -d dist/spa",
+    "lint": "eslint --ext .js,.cjs,.ts,.vue ./src",
+    "lint:fix": "eslint --ext .js,.ts,.vue ./src --fix",
+    "format": "prettier --write \"**/*.{js,ts,vue,css,scss,json,md}\" --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.12",
+    "quasar": "^2.16.9",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.10.3",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.24.0",
+    "gh-pages": "^6.1.1",
+    "prettier": "^3.2.5",
+    "sass": "^1.74.1",
+    "typescript": "^5.4.2"
+  },
+  "engines": {
+    "node": "^20.0.0",
+    "npm": "^10.0.0"
+  }
+}

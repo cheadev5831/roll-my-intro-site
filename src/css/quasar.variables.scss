@@ -1,0 +1,110 @@
+// ─────────────────────────────────────────────
+// Quasar 변수 오버라이드 & 브랜드 컬러 팔레트
+// ─────────────────────────────────────────────
+//
+// 디자인 컨셉: Modern Minimal Tech
+//  - Primary   : Indigo (신뢰·전문성)
+//  - Secondary : Cyan   (혁신·활기)
+//  - Accent    : Amber  (강조·CTA)
+//  - Dark      : Slate  (세련된 다크모드)
+//
+// Breakpoints  (Quasar 기본 + 커스텀 주석)
+//  xs : 0     ~ 599px   → 모바일
+//  sm : 600px ~ 1023px  → 태블릿
+//  md : 1024px~ 1439px  → 데스크톱
+//  lg : 1440px~ 1919px  → 와이드
+//  xl : 1920px~         → 울트라와이드
+// ─────────────────────────────────────────────
+
+// ── 브랜드 주요 컬러 ─────────────────────────
+$primary   : #4F46E5;   // Indigo-600
+$secondary : #06B6D4;   // Cyan-500
+$accent    : #F59E0B;   // Amber-500
+
+// ── 시맨틱 컬러 ──────────────────────────────
+$positive  : #10B981;   // Emerald-500
+$negative  : #EF4444;   // Red-500
+$info      : #3B82F6;   // Blue-500
+$warning   : #F59E0B;   // Amber-500
+
+// ── 다크 모드 배경 (Slate 계열) ───────────────
+$dark      : #1E293B;   // Slate-800
+$dark-page : #0F172A;   // Slate-900
+
+// ─────────────────────────────────────────────
+// CSS Custom Properties (다크/라이트 모드 대응)
+// ─────────────────────────────────────────────
+:root {
+  // 배경
+  --bg-page        : #FFFFFF;
+  --bg-section-alt : #F8FAFC;   // 짝수 섹션 배경 (slate-50)
+  --bg-card        : #FFFFFF;
+  --bg-card-hover  : #F1F5F9;   // slate-100
+
+  // 텍스트
+  --text-primary   : #0F172A;   // slate-900
+  --text-secondary : #475569;   // slate-600
+  --text-muted     : #94A3B8;   // slate-400
+
+  // 테두리
+  --border-color   : #E2E8F0;   // slate-200
+  --border-hover   : #CBD5E1;   // slate-300
+
+  // 그라디언트 (히어로 등)
+  --gradient-primary  : linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #06B6D4 100%);
+  --gradient-hero-bg  : linear-gradient(135deg, #EEF2FF 0%, #F0FDFF 100%);
+  --gradient-text     : linear-gradient(135deg, #4F46E5, #06B6D4);
+
+  // 그림자
+  --shadow-sm      : 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md      : 0 4px 16px rgba(79,70,229,0.10), 0 2px 6px rgba(0,0,0,0.06);
+  --shadow-lg      : 0 10px 40px rgba(79,70,229,0.15), 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-card    : 0 2px 12px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 8px 32px rgba(79,70,229,0.18);
+
+  // 글래스모피즘 (헤더)
+  --glass-bg       : rgba(255,255,255,0.85);
+  --glass-border   : rgba(255,255,255,0.6);
+  --glass-blur     : blur(12px);
+
+  // 섹션 타이틀 언더라인
+  --underline-gradient: linear-gradient(90deg, #4F46E5, #06B6D4);
+
+  // 반응형 컨테이너 최대 너비
+  --container-sm   : 640px;
+  --container-md   : 800px;
+  --container-lg   : 1100px;
+  --container-xl   : 1280px;
+
+  // 섹션 패딩
+  --section-py-desktop : 100px;
+  --section-py-tablet  : 72px;
+  --section-py-mobile  : 56px;
+}
+
+// ── 다크 모드 오버라이드 ──────────────────────
+.body--dark {
+  --bg-page        : #0F172A;
+  --bg-section-alt : #1E293B;
+  --bg-card        : #1E293B;
+  --bg-card-hover  : #334155;   // slate-700
+
+  --text-primary   : #F1F5F9;   // slate-100
+  --text-secondary : #94A3B8;   // slate-400
+  --text-muted     : #64748B;   // slate-500
+
+  --border-color   : #334155;   // slate-700
+  --border-hover   : #475569;   // slate-600
+
+  --gradient-hero-bg  : linear-gradient(135deg, #1e1b4b 0%, #0c1a2e 100%);
+  --gradient-text     : linear-gradient(135deg, #818CF8, #22D3EE);
+
+  --shadow-sm      : 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md      : 0 4px 16px rgba(0,0,0,0.3);
+  --shadow-lg      : 0 10px 40px rgba(0,0,0,0.4);
+  --shadow-card    : 0 2px 12px rgba(0,0,0,0.25);
+  --shadow-card-hover: 0 8px 32px rgba(99,102,241,0.25);
+
+  --glass-bg       : rgba(15,23,42,0.85);
+  --glass-border   : rgba(255,255,255,0.08);
+}
