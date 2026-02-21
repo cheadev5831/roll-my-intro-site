@@ -165,17 +165,17 @@ export interface Profile {
 
 export const profile: Profile = {
   developer: {
-    name: '홍길동',
-    nameEn: 'Gildong Hong',
+    name: '채우리',
+    nameEn: 'Woori Chae',
     title: 'Frontend Developer',
     subTitle: 'Vue.js / TypeScript',
     tagline: '사용자 경험을 최우선으로 생각하는 프론트엔드 개발자입니다.',
     bio: [
-      '안녕하세요! 3년차 프론트엔드 개발자 홍길동입니다.',
+      '안녕하세요! 10년차 프론트엔드 개발자 채우리입니다.',
       'Vue.js와 TypeScript를 주력으로 사용하며, 사용자가 편리하게 쓸 수 있는 인터페이스를 만드는 데 열정을 가지고 있습니다.',
       '새로운 기술을 빠르게 습득하고, 팀과의 원활한 커뮤니케이션을 통해 더 나은 제품을 만들기 위해 노력합니다.',
     ],
-    email: 'gildong.hong@example.com',
+    email: 'cheadev5831@gmail.com',
     location: '서울특별시, 대한민국',
     avatarUrl: '',
     availableForWork: true,
@@ -194,7 +194,7 @@ export const profile: Profile = {
       },
       {
         label: 'Email',
-        url: 'mailto:gildong.hong@example.com',
+        url: 'mailto:cheadev5831@gmail.com',
         icon: 'email',
         visible: true,
       },
