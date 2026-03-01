@@ -30,3 +30,6 @@ dist
 # Local env files
 .env.local
 .env.*.local
+
+# Screenshot / utility scripts output
+scripts/screenshots/

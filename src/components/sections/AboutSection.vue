@@ -299,15 +299,7 @@ function scrollTo(id: string) {
 }
 
 .info-icon {
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(79, 70, 229, 0.08);
-  border-radius: 8px;
-  color: $primary;
-  flex-shrink: 0;
+  @include icon-box-primary(36px, 8px);
 }
 
 .info-body {

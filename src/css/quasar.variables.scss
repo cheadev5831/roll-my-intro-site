@@ -82,6 +82,64 @@ $dark-page : #0F172A;   // Slate-900
   --section-py-mobile  : 56px;
 }
 
+// ─────────────────────────────────────────────
+// 공통 SCSS 믹스인
+// ─────────────────────────────────────────────
+
+// 아이콘 래퍼 박스 (인디고 배경, primary 색상)
+// 사용: AboutSection, SkillsSection, EducationSection
+@mixin icon-box-primary($size: 36px, $radius: 8px) {
+  width: $size;
+  height: $size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(79, 70, 229, 0.08);
+  border-radius: $radius;
+  color: $primary;
+  flex-shrink: 0;
+}
+
+// 소셜 아이콘 링크 버튼 (border + bg-card + hover primary)
+// 사용: HeroSection
+@mixin social-icon-link($size: 40px, $radius: 10px) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $size;
+  height: $size;
+  border-radius: $radius;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  box-shadow: var(--shadow-sm);
+
+  &:hover {
+    color: $primary;
+    border-color: rgba(79, 70, 229, 0.4);
+    background: rgba(79, 70, 229, 0.05);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+// 카드 호버 효과 (bg-card + border + shadow + hover translateY)
+// 사용: SkillsSection, ExperienceSection
+@mixin card-hover($translateY: -4px, $border-alpha: 0.3) {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY($translateY);
+    box-shadow: var(--shadow-card-hover);
+    border-color: rgba(79, 70, 229, $border-alpha);
+  }
+}
+
 // ── 다크 모드 오버라이드 ──────────────────────
 .body--dark {
   --bg-page        : #0F172A;

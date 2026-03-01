@@ -351,26 +351,7 @@ onMounted(() => {
 }
 
 .social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  border: 1px solid var(--border-color);
-  background: var(--bg-card);
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
-  box-shadow: var(--shadow-sm);
-
-  &:hover {
-    color: $primary;
-    border-color: rgba(79, 70, 229, 0.4);
-    background: rgba(79, 70, 229, 0.05);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-  }
+  @include social-icon-link(40px, 10px);
 }
 
 // ── 메타 정보 ─────────────────────────────────

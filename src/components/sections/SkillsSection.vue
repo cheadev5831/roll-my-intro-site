@@ -147,18 +147,9 @@ const filteredSkills = computed(() =>
 
 // ── 스킬 카드 ─────────────────────────────────
 .skill-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  @include card-hover(-4px, 0.25);
   border-radius: 16px;
   padding: 22px;
-  box-shadow: var(--shadow-card);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-card-hover);
-    border-color: rgba(79, 70, 229, 0.25);
-  }
 }
 
 .skill-card-header {
@@ -171,15 +162,7 @@ const filteredSkills = computed(() =>
 }
 
 .skill-cat-icon {
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(79, 70, 229, 0.08);
-  border-radius: 10px;
-  color: $primary;
-  flex-shrink: 0;
+  @include icon-box-primary(38px, 10px);
 }
 
 .skill-cat-name {

@@ -121,15 +121,7 @@ function certIcon(type: Certificate['type']): string {
 }
 
 .group-icon {
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(79, 70, 229, 0.08);
-  border-radius: 8px;
-  color: $primary;
-  flex-shrink: 0;
+  @include icon-box-primary(34px, 8px);
 
   &--cert {
     background: rgba(245, 158, 11, 0.1);

@@ -154,19 +154,10 @@ function formatPeriod(exp: Experience): string {
 
 // ── 경력 카드 ─────────────────────────────────
 .exp-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  @include card-hover(-2px, 0.25);
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 24px;
-  box-shadow: var(--shadow-card);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-card-hover);
-    border-color: rgba(79, 70, 229, 0.25);
-  }
 
   @media (max-width: 599px) {
     padding: 18px;
